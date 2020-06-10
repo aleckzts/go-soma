@@ -9,6 +9,6 @@ func main() {
 
 func soma(a int, b int) int {
   var resultado int
-  resultado := a + b
+  resultado = a + b
   return resultado
 }
