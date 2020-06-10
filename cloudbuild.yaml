@@ -1,7 +1,7 @@
 steps:
   - id: "Build do source em Go"
     name: 'gcr.io/cloud-builders/go:alpine'
-    args: ['install', '.']
+    args: ['install', 'soma']
     env: ['PROJECT_ROOT=soma']
 
   - id: "Teste do compilado"
@@ -13,5 +13,4 @@ steps:
     name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--tag=gcr.io/$PROJECT_ID/go-soma', '.']
 
-images:
-  - 'gcr.io/$PROJECT_ID/go-soma:latest'
+images: ['gcr.io/$PROJECT_ID/go-soma:latest']
